@@ -53,6 +53,9 @@
   }
 }
 @media screen and (max-width: 1150px) {
+  .popup_add_message {
+    width: 80%;
+  }
   .divide::after {
     width: 70%;
   }
@@ -753,15 +756,19 @@
   .declaration_wrap.details_declaration h3 {
     display: none;
   }
-  .declaration_wrap.details_declaration .action_btn {
+  .declaration_wrap.details_declaration .action_btn_mobile {
     background: #2361A9;
     padding: 4px 15px;
+    border-radius: 100px;
   }
-  .declaration_wrap.details_declaration .action_btn h6 {
+  .declaration_wrap.details_declaration .action_btn_mobile h6 {
     display: none;
   }
-  .declaration_wrap.details_declaration .action_btn .dots {
+  .declaration_wrap.details_declaration .action_btn_mobile .dots {
     margin-left: 0;
+  }
+  .declaration_wrap.details_declaration .action_btn {
+    display: none;
   }
   .mobile_declr {
     display: block;
