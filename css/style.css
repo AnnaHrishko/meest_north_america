@@ -207,6 +207,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
+  cursor: pointer;
 }
 
 .sub-button {
@@ -223,6 +224,7 @@ body {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .glyphicon-remove {
@@ -1265,11 +1267,18 @@ header .logo.north_america img {
   border-radius: 8px;
   margin-bottom: 8px;
 }
+.accordion_body .accordion_sec.active .name_sec svg {
+  transform: rotate(180deg);
+}
+.accordion_body .accordion_sec.active .name_sec svg path {
+  fill: #2361A9;
+}
 .accordion_body .name_sec {
   padding: 25px 30px 25px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .accordion_body .name_sec span {
   font-weight: 700;
@@ -1462,6 +1471,7 @@ footer {
   color: #FFFFFF;
   text-decoration: none;
   height: 45px;
+  cursor: pointer;
 }
 
 .blue_button54 {
@@ -1480,6 +1490,7 @@ footer {
   color: #FFFFFF;
   text-decoration: none;
   height: 54px;
+  cursor: pointer;
 }
 
 .transparent_btn {
@@ -1496,6 +1507,7 @@ footer {
   text-transform: uppercase;
   color: #FFFFFF;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .history_wrap_heading {
@@ -1912,6 +1924,9 @@ tr:nth-child(even) {
 }
 .form_parcel_details .form-flex.del-details {
   margin-bottom: 20px;
+}
+.form_parcel_details .form-flex.del-details .parcel-weight {
+  margin-right: 30px;
 }
 
 .bottom_part_form {
@@ -2716,6 +2731,7 @@ body .ui-datepicker select.ui-datepicker-month {
   align-items: center;
   padding: 8px 18px 8px 24px;
   position: relative;
+  cursor: pointer;
 }
 .action_btn h6 {
   font-weight: 700;
@@ -2799,7 +2815,14 @@ body.magnificpopupnoscroll {
   background-size: cover;
   margin-right: 5px;
   width: 24px !important;
-  height: 24px;
+  height: 24px !important;
+  background-size: cover !important;
+}
+
+.select2-selection__placeholder {
+  display: flex !important;
+  align-items: center !important;
+  color: #1B2B3C !important;
 }
 
 .reports_update_padding .blue_button45 {
@@ -2976,4 +2999,41 @@ body.magnificpopupnoscroll {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.action_btn_mobile {
+  display: none;
+  cursor: pointer;
+}
+
+#table_scrollbar th {
+  white-space: nowrap;
+}
+
+.discount_list_decktop {
+  margin-top: 30px;
+}
+.discount_list_decktop .h2 {
+  margin-bottom: 15px;
+}
+.discount_list_decktop .options_card {
+  width: 100%;
+}
+.discount_list_decktop .options_card:first-of-type {
+  margin-bottom: 10px;
+}
+.discount_list_decktop .options_card .info_del_opt .title_info {
+  margin-bottom: 10px;
+}
+.discount_list_decktop .options_card .info_del_opt .title_info:last-of-type {
+  margin-bottom: 0;
+}
+.discount_list_decktop .options_card .info_del_opt .subtitle {
+  margin-bottom: 10px;
+}
+.discount_list_decktop .center_div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }

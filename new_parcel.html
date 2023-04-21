@@ -317,10 +317,8 @@
 								<div class="form-flex parcel-details d-flex ai">
 									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
-										<select name="select" id="" class="select" autocomplete="off">
-											<option value="" selected disabled>Country</option>
-											<option value="Germany">Germany</option>
-											<option value="Poland">Poland</option>
+										<select name="country" id="" class="country_select">
+											<option value=""></option>
 										</select>
 									</div>
 									<div class="form-row">
@@ -661,7 +659,7 @@
 								<div class="form-flex d-flex ai">
 									<div class="form-row">
 										<label for="" class="label">Phone #</label>
-										<input type="text" class="input phone" name="phone" placeholder="Phone">
+										<input type="tel" name="phone" inputmode="numeric" class="input phoneInput" placeholder="Contact Phone" autocomplete="off" aria-invalid="false"  >
 									</div>
 									<div class="form-row">
 										<label for="" class="label">Email</label>
@@ -693,7 +691,7 @@
 											
 										</div> -->
 									</div>
-									<div class="form-row">
+									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
 										<select name="country" id="" class="country_select">
 											<option value=""></option>
@@ -760,7 +758,7 @@
 								<div class="form-flex d-flex ai">
 									<div class="form-row">
 										<label for="" class="label">Phone #</label>
-										<input type="text" class="input phone" name="phone" placeholder="Phone">
+										<input type="tel" name="phone" inputmode="numeric" class="input phoneInput" placeholder="Contact Phone" autocomplete="off" aria-invalid="false">
 									</div>
 									<div class="form-row">
 										<label for="" class="label">Email</label>
@@ -789,7 +787,7 @@
 											<option value="Ukraine">Ukraine</option>
 										</select>
 									</div>
-									<div class="form-row">
+									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
 										<select name="country" id="" class="country_select">
 											<option value=""></option>
@@ -1176,9 +1174,39 @@
 							<p class="h2">$00.00</p>
 						</div>
 					</div>
-					<div class="promocode d-flex ai jc form">
-						<h2 class="h2">PROMOCODE</h2>
-						<a href="#popup_promocode" class="button_filter promocode-add h2">Add</a>	
+					<div class="discount_list_decktop">
+						<h2 class="h2">Discount List</h2>
+						<form action="" class="form_filter_decktop">
+							<div class="options_card">
+								<div class="radio_options">
+									<input type="radio" id="input_pickup_loc3" name="input_pickup_loc">
+									<label for="input_pickup_loc3" class="radio_label">
+										<span class="custom_radio"></span>
+									</label>
+								</div>
+								<div class="info_del_opt">
+									<p class="title_info">Warm Clothing Discount</p>
+									<p class="subtitle">Money: <span class="title_info">30.00 CAD </span></p>
+									<p class="title_info">TEPLO30</p>
+								</div>
+							</div>
+							<div class="options_card">
+								<div class="radio_options">
+									<input type="radio" id="input_pickup_loc4" name="input_pickup_loc">
+									<label for="input_pickup_loc4" class="radio_label">
+										<span class="custom_radio"></span>
+									</label>
+								</div>
+								<div class="info_del_opt">
+									<p class="title_info">Warm Clothing Discount</p>
+									<p class="subtitle">Money: <span class="title_info">30.00 CAD </span></p>
+									<p class="title_info">TEPLO30</p>
+								</div>
+							</div>
+							<div class="center_div">
+								<button class="blue_button45">Add PROMOCODE</button>
+							</div>
+						</form>
 					</div>
 				</div>
 				<div class="modile-delivery-price">
@@ -1271,6 +1299,7 @@
 <script src="js/jq.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.4/simplebar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>

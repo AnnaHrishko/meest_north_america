@@ -374,10 +374,8 @@
 								<div class="form-flex parcel-details d-flex ai">
 									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
-										<select name="select" id="" class="select" autocomplete="off">
-											<option value="" selected disabled>Country</option>
-											<option value="Germany">Germany</option>
-											<option value="Poland">Poland</option>
+										<select name="country" id="" class="country_select">
+											<option value=""></option>
 										</select>
 									</div>
 									<div class="form-row">
@@ -718,7 +716,7 @@
 								<div class="form-flex d-flex ai">
 									<div class="form-row">
 										<label for="" class="label">Phone #</label>
-										<input type="text" class="input phone" name="phone" placeholder="Phone">
+										<input type="tel" name="phone" inputmode="numeric" class="input phoneInput" placeholder="Contact Phone" autocomplete="off" aria-invalid="false"  >
 									</div>
 									<div class="form-row">
 										<label for="" class="label">Email</label>
@@ -750,7 +748,7 @@
 											
 										</div> -->
 									</div>
-									<div class="form-row">
+									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
 										<select name="country" id="" class="country_select">
 											<option value=""></option>
@@ -817,7 +815,7 @@
 								<div class="form-flex d-flex ai">
 									<div class="form-row">
 										<label for="" class="label">Phone #</label>
-										<input type="text" class="input phone" name="phone" placeholder="Phone">
+										<input type="tel" name="phone" inputmode="numeric" class="input phoneInput" placeholder="Contact Phone" autocomplete="off" aria-invalid="false"  >
 									</div>
 									<div class="form-row">
 										<label for="" class="label">Email</label>
@@ -846,7 +844,7 @@
 											<option value="Ukraine">Ukraine</option>
 										</select>
 									</div>
-									<div class="form-row">
+									<div class="form-row flex_direct">
 										<label for="" class="label">Country</label>
 										<select name="country" id="" class="country_select">
 											<option value=""></option>
@@ -1445,6 +1443,7 @@
 <script src="js/jq.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplebar/6.2.4/simplebar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>

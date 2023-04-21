@@ -28,7 +28,7 @@ $('.country_select').select2({
   templateResult: flagTemplate,
   templateSelection: flagTemplate,
   // Set placeholder text
-  placeholder: 'Select country...',
+  placeholder: 'Сountry',
   // Load country list from https://restcountries.com
   ajax: {
     url: generateUrl,
@@ -77,6 +77,12 @@ $('.content').hide().eq(0).show();
     $(".content").slideUp();
     $(this).find('.content').slideDown();
     return false;
+});
+
+jQuery(function($){
+   
+   $(".phoneInput").mask("+ 38 (999) 999-99-99");
+   $('#number-card').mask('9       9       9       9       9       9       9       9       9       9       9       9');
 });
 
 $(function() {
@@ -268,6 +274,11 @@ $(function() {
 $(".select").select2().change(function() {
     $(this).valid();
 });
+
+$(document).on('change', '.country_select', function() {
+   $(this).valid();
+});
+
 
 $(function() {
     $(".form-user-address").validate({
