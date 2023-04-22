@@ -2049,7 +2049,7 @@ tr:nth-child(even) {
   color: #2361A9;
 }
 
-.form-parcel-content {
+.form_parcel_content {
   padding: 30px;
 }
 
@@ -2111,6 +2111,7 @@ tr:nth-child(even) {
   width: calc(33.3% - 20px);
   margin-bottom: 21px;
   margin-right: 20px;
+  cursor: pointer;
 }
 .payment_method-object:last-of-type {
   margin-right: 0;
@@ -2385,6 +2386,7 @@ tr:nth-child(even) {
 }
 
 .options_card {
+  position: relative;
   border: 1px solid #D7D8D9;
   border-radius: 8px;
   width: calc(50% - 10px);
@@ -2508,6 +2510,7 @@ tr:nth-child(even) {
 .add_new_item {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .add_new_item p {
   font-weight: 600;
@@ -2583,6 +2586,7 @@ body .ui-datepicker select.ui-datepicker-month {
   display: flex;
   background: #2361A9;
   align-items: center;
+  cursor: pointer;
 }
 .add-new-item.mobile p {
   font-weight: 600;
@@ -3036,4 +3040,28 @@ body.magnificpopupnoscroll {
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+}
+
+.payment_wrap_position {
+  position: relative;
+}
+.payment_wrap_position #payment_method-error {
+  position: absolute;
+  bottom: 0;
+}
+
+.flex_options_cards.first {
+  position: relative;
+}
+.flex_options_cards.first #input_pickup_loc1-error {
+  position: absolute;
+  bottom: -15px;
+}
+
+.flex_options_cards.second {
+  position: relative;
+}
+.flex_options_cards.second #input_pickup_loc2-error {
+  position: absolute;
+  bottom: -15px;
 }

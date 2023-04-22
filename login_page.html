@@ -14,7 +14,7 @@
 			<a href="" class="logo north_america"><img src="img/logo_north_america.svg" alt="logo-meest"></a>
 			<div class="s_register_page">
 				<div class="login-form w40">
-					<form action="" class="login-form-valid form">
+					<form action="" class="login-form-valid form" autocomplete="off">
 						<div class="container-form">
 							<h2 class="heading">
 								LOGIN
@@ -37,15 +37,17 @@
 							<div class="form-row flex_direct">
 								<label for="" class="label">Branch to work with</label>
 								<select name="branch_to_work" id="" class="select">
-									<option value="">Ukraine</option>
-									<option value="">Poland</option>
+									<option value="" selected disabled>Branch to work</option>
+									<option value="Ukraine">Ukraine</option>
+									<option value="Poland">Poland</option>
 								</select>
 							</div>
 							<div class="form-row flex_direct">
 								<label for="" class="label">List of Services</label>
 								<select name="list_serv" id="" class="select">
-									<option value="">Ukraine</option>
-									<option value="">POland</option>
+									<option value="" selected disabled>List of Services</option>
+									<option value="Ukraine">Ukraine</option>
+									<option value="POland">POland</option>
 								</select>
 							</div>
 							<button class="main-button">LOGIN</button>

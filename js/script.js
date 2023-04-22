@@ -79,11 +79,11 @@ $('.content').hide().eq(0).show();
     return false;
 });
 
-jQuery(function($){
-   
+if ($(".phoneInput").length){
    $(".phoneInput").mask("+ 38 (999) 999-99-99");
    $('#number-card').mask('9       9       9       9       9       9       9       9       9       9       9       9');
-});
+}
+
 
 $(function() {
     $.validator.addMethod("emailRegex", function(value, element) {
@@ -130,6 +130,23 @@ function ValidatePassword() {
     $(document).ready(function() {
       $(".password").on('keyup', ValidatePassword)
     });
+
+// $(".select").on('change', function () {
+//   $('.form').valid();
+// });
+
+$(".select").select2().change(function() {
+    $(this).valid();
+});
+
+// $(document).on('change', '.select', function() {
+//    $(this).valid();
+// });
+
+$(document).on('change', '.country_select', function() {
+   $(this).valid();
+});
+
 
 $(function() {
     $(".form_change_password").validate({
@@ -265,18 +282,6 @@ $(function() {
             },
         },
     });
-});
-
-// $(".select").on('change', function () {
-//   $('.form').valid();
-// });
-
-$(".select").select2().change(function() {
-    $(this).valid();
-});
-
-$(document).on('change', '.country_select', function() {
-   $(this).valid();
 });
 
 
@@ -467,6 +472,104 @@ $(function() {
             "country": {
               required: "Required field",
             },
+        }
+    });
+});
+
+$(document).on('input', 'form input', function(){
+  $(this).parents('form').valid()
+})
+
+$(document).on('change', 'form select', function(){
+  $(this).valid();
+})
+
+
+$(function() {
+    $(".form_parcel_content").validate({
+        ignore: [],
+        rules: {
+            "declared_value": {
+                required: true,
+            },
+            "declared_value2": {
+                required: true,
+            },
+            "obligatory_checkbox": {
+                required: true,
+            },
+        },
+        messages: {
+            "declared_value": {
+                required: "Required field",
+            },
+            "declared_value2": {
+                required: "Required field",
+            },
+            "obligatory_checkbox": {
+                required: "Required",
+            },
+        },
+    });
+});
+
+
+$(function() {
+    $(".form_delivery_options").validate({
+        ignore: [],
+        rules: {
+            "input_pickup_loc1": {
+                required: true,
+            },
+            "input_pickup_loc2": {
+                required: true,
+            },
+        },
+        messages: {
+            "input_pickup_loc1": {
+                required: "Required fields",
+            },
+            "input_pickup_loc2": {
+                required: "Required fields",
+            },
+        },
+        errorPlacement: function (error, element) {
+          var elId = element.attr('name');
+          if(elId == 'input_pickup_loc1')
+          {
+            var placement = element.closest('.flex_options_cards.first');
+              error.appendTo('.flex_options_cards.first');
+          }
+          else
+          if(elId == 'input_pickup_loc2')
+          {
+              var placement = element.closest('.flex_options_cards.second');
+              error.appendTo('.flex_options_cards.second');
+          }               
+        }
+    });
+});
+
+$(function() {
+    $(".form_payment_method").validate({
+        ignore: [],
+        rules: {
+            "payment_method": {
+                required: true,
+            },
+        },
+        messages: {
+            "payment_method": {
+                required: "Required fields",
+            },
+        },
+        errorPlacement: function (error, element) {
+          var elId = element.attr('name');
+          if(elId == 'payment_method')
+          {
+            //var placement = element.closest('.payment_method-flex');
+              error.appendTo('.payment_wrap_position');
+          }              
         }
     });
 });
@@ -662,11 +765,12 @@ $(function() {
     });
 });
 
-$( ".datepicker" ).datepicker({
-  showOn: "focus",
-  dateFormat: "dd/mm/yy",
-});
-
+if ($(".datepicker").length){
+  $( ".datepicker" ).datepicker({
+    showOn: "focus",
+    dateFormat: "dd/mm/yy",
+  });
+}
 // $('.datepicker').datepicker()
 
 $('.modile-delivery-price .accordion-title').click(function(){

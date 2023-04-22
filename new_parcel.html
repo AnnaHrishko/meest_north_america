@@ -381,7 +381,7 @@
 						<form action="" class="form_delivery_options section-sub-menu bb">
 							<div class="block_delivery_options">
 								<h3 class="heading_del_options">Delivery Options</h3>
-								<div class="flex_options_cards">
+								<div class="flex_options_cards first">
 									<div class="options_card">
 										<div class="radio_options">
 											<input type="radio" id="radio_opt1" name="input_pickup_loc1">
@@ -474,7 +474,7 @@
 							</div>
 							<div class="block_delivery_options">
 								<h3 class="heading_del_options">Pickup Locations</h3>
-								<div class="flex_options_cards">
+								<div class="flex_options_cards second">
 									<div class="options_card">
 										<div class="radio_options">
 											<input type="radio" id="radio_opt3" name="input_pickup_loc2">
@@ -1064,7 +1064,7 @@
 									<p>Add new item</p>
 								</a>
 							</div>
-							<form class="form-flex-wrap form-parcel-content">
+							<form class="form-flex-wrap form_parcel_content" autocomplete="off">
 								<div class="form-flex d-flex ai">
 									<div class="form-row">
 										<label for="" class="label">Declared Value*</label>
@@ -1107,10 +1107,11 @@
 							</a>
 						</div>
 						<div class="section-sub-menu">
-							<form action="">
+							<form action="" class="form_payment_method" autocomplete="off">
+								<div class="payment_wrap_position">
 								<div class="payment_method-flex d-flex jc">
 									<div class="payment_method-object w100">
-										<input class="check-input pay_card" type="radio" id="checkbox26" name="check6">
+										<input class="check-input pay_card" type="radio" id="checkbox26" name="payment_method">
 										<label for="checkbox26" class="payment_method">
 											<span class="false-radio"></span>
 											<div class="text-pay">
@@ -1119,7 +1120,7 @@
 										</label>
 									</div>
 									<div class="payment_method-object w100">
-										<input class="check-input pay_card" type="radio" id="checkbox27" name="check6">
+										<input class="check-input pay_card" type="radio" id="checkbox27" name="payment_method">
 										<label for="checkbox27" class="payment_method">
 											<span class="false-radio"></span>
 											<div class="text-pay">
@@ -1128,7 +1129,7 @@
 										</label>
 									</div>
 									<div class="payment_method-object w100">
-										<input class="check-input cash-method" type="radio" id="checkbox28" name="check6">
+										<input class="check-input cash-method" type="radio" id="checkbox28" name="payment_method">
 										<label for="checkbox28" class="payment_method">
 											<span class="false-radio"></span>
 											<div class="text-pay">
@@ -1136,6 +1137,7 @@
 											</div>
 										</label>
 									</div>
+								</div>
 								</div>
 								<div class="additional-information d-flex mb-30">
 									<img src="img/info-circle.svg" alt="">
