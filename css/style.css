@@ -1649,7 +1649,7 @@ tr:nth-child(even) {
   color: #1B2B3C;
   padding: 16px 24px;
   text-decoration: none;
-  display: block;
+  display: flex;
 }
 .line-dots-menu:hover {
   background-color: #ECEFF3;

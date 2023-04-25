@@ -79,10 +79,19 @@ $('.content').hide().eq(0).show();
     return false;
 });
 
-if ($(".phoneInput").length){
-   $(".phoneInput").mask("+ 38 (999) 999-99-99");
-   $('#number-card').mask('9       9       9       9       9       9       9       9       9       9       9       9');
-}
+
+$(".phoneInput", "body")
+  .mask("+ 38 (999) 999 99 99")
+  .bind("blur", function () {
+    // force revalidate on blur.
+
+    var frm = $(this).parents(".form_validate");
+    // if form has a validator
+    if ($.data( frm[0], 'validator' )) {
+      var validator = $(this).parents(".form_validate").validate();
+      validator.settings.onfocusout.apply(validator, [this]);
+    }
+});
 
 
 $(function() {
@@ -95,6 +104,12 @@ $(function() {
     $.validator.addMethod("passwordRegex", function(value, element) {
         return this.optional(element) || /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/i.test(value);
     }, "");
+});
+
+$(function() {
+   $.validator.addMethod("usPhoneFormat", function (value, element) {
+    return this.optional(element) || /^\(\d{3}\) \d{3}\-\d{4}( x\d{1,6})?$/.test(value);
+}, "Enter a valid phone number."); 
 });
 
 function ValidatePassword() {
@@ -135,9 +150,10 @@ function ValidatePassword() {
 //   $('.form').valid();
 // });
 
-$(".select").select2().change(function() {
+$(".select:not(.select_not_valid)").select2().change(function() {
     $(this).valid();
 });
+
 
 // $(document).on('change', '.select', function() {
 //    $(this).valid();
@@ -224,6 +240,7 @@ $(function() {
             },
             "phone": {
               required: true,
+              usPhoneFormat: true,
             },
             "last_name": {
               required: true,
@@ -262,6 +279,7 @@ $(function() {
             },
             "phone": {
               required: "Required field",
+              usPhoneFormat: "Enter the correct phone",
             },
             "last_name": {
               required: "Required field",
