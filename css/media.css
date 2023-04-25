@@ -822,6 +822,22 @@
     fill: #2361A9;
   }
 }
+@media screen and (max-width: 550px) {
+  .l_col {
+    width: 75%;
+  }
+  .r_col {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .l_col {
+    width: 65%;
+  }
+  .r_col {
+    width: 35%;
+  }
+}
 @media screen and (max-width: 410px) {
   .declaration_form .flex_btn .blue_button54 {
     font-size: 11px;

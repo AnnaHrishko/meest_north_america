@@ -99,10 +99,26 @@ $('.add_new_item_click').click(function(){
 
 })
 
-
  $(document).on('click', '.delete_goods', function (e) {
     let i = $(this).parent().index()
     $('.goods_row').eq(i).remove()
+    return false
+})
+
+
+
+var itemParcel = document.querySelector('.item-parcel-cont-quant') ? document.querySelector('.item-parcel-cont-quant').outerHTML : '';
+// let goodsIndex = 0
+$('.add_new_item_mobile').click(function(){
+     $('.mobile-parcel-content-table').append(itemParcel)
+     $('.select:not(.country_select)').select2();
+     return false
+
+})
+
+ $(document).on('click', '.delete_item_parcel', function (e) {
+    let i = $(this).parents('.item-parcel-cont-quant').index()
+    $('.item-parcel-cont-quant').eq(i).remove()
     return false
 })
 

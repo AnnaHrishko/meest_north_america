@@ -2517,7 +2517,7 @@ tr:nth-child(even) {
   align-items: center;
   cursor: pointer;
 }
-.add_new_item p {
+.add_new_item span {
   font-weight: 600;
   font-size: 16px;
   line-height: 109%;
@@ -2593,7 +2593,7 @@ body .ui-datepicker select.ui-datepicker-month {
   align-items: center;
   cursor: pointer;
 }
-.add-new-item.mobile p {
+.add-new-item.mobile span {
   font-weight: 600;
   font-size: 16px;
   line-height: 109%;
