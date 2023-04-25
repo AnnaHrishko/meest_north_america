@@ -79,8 +79,8 @@ $('.content').hide().eq(0).show();
     return false;
 });
 
-
-$(".phoneInput", "body")
+if ($(".phoneInput").length){
+  $(".phoneInput", "body")
   .mask("+ 38 (999) 999 99 99")
   .bind("blur", function () {
     // force revalidate on blur.
@@ -91,7 +91,9 @@ $(".phoneInput", "body")
       var validator = $(this).parents(".form_validate").validate();
       validator.settings.onfocusout.apply(validator, [this]);
     }
-});
+  });
+}
+
 
 
 $(function() {
