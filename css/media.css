@@ -108,6 +108,9 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .add-new-item.mobile {
+    display: flex;
+  }
   .form_parcel_details .form-flex-wrap {
     margin-bottom: 0;
   }
