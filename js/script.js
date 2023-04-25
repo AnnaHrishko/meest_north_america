@@ -2,10 +2,6 @@ $(document).ready(function() {
     $('.select:not(.country_select)').select2();
 });
 
-// $(".country_select").select2({
-//   templateResult: formatState,
-//   templateSelection: formatState,
-// });
 
 
 // Template function which adds CSS flag and displays country name
@@ -94,18 +90,19 @@ if ($(".phoneInput").length){
   });
 }
 
-
-var goodsRow = $('.goods_row').html(); 
-var goodsIndex = 0
-
+var goodsRow = document.querySelector('.goods_row') ? document.querySelector('.goods_row').outerHTML : '';
+let goodsIndex = 0
 $('.add_new_item_click').click(function(){
      $('.parcel_all_goods').append(goodsRow)
+     $('.select:not(.country_select)').select2();
      return false
+
 })
 
-goodsIndex = $(this).parent().index()
+
  $(document).on('click', '.delete_goods', function (e) {
-    $('.goods_row').eq(goodsIndex).remove()
+    let i = $(this).parent().index()
+    $('.goods_row').eq(i).remove()
     return false
 })
 
