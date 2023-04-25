@@ -65,6 +65,9 @@
   }
 }
 @media screen and (max-width: 1150px) {
+  .form-flex-wrap.billing_address .right .im_robot {
+    width: 270px;
+  }
   .popup_add_message {
     width: 80%;
   }
